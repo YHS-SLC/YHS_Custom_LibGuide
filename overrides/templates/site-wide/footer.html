@@ -87,15 +87,13 @@
                 </a>
             </nav>
         </div>
-        <form id="help-form" method="POST" target="dummyframe"
-            action="https://docs.google.com/forms/d/e/1FAIpQLSdPOEaLxfht1ap8IFeZdl_YmqDv2H2p9whpmCyyCQBBoDenJw/formResponse?embedded=true">
+        <form id="help-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdPOEaLxfht1ap8IFeZdl_YmqDv2H2p9whpmCyyCQBBoDenJw/formResponse?embedded=true" target="dummyframe" method="POST">
             <!--Using: https://dev.to/ninest/natively-embed-google-forms-in-your-website-57g3-->
             <h2>Have a Question?</h2>
-            <input placeholder="YourEmail@yorkhouse.ca" type="email" name="entry.1941148987" required>
+            <input type="email" name="emailAddress" placeholder="YourEmail@yorkhouse.ca" required>
             <div>
-                <textarea
-                    placeholder="What database should I use for biographies?&#10;How do I request the library to order a new book?&#10;What is the tallest building in the world?"
-                    name="entry.2135211842" required></textarea>
+                <textarea name="entry.2135211842"
+                            placeholder="What database should I use for biographies?&#10;How do I request the library to order a new book?&#10;What is the tallest building in the world?" required></textarea>
                 <button type="submit"></button>
             </div>
             <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>

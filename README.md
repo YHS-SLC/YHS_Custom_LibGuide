@@ -3,7 +3,6 @@
 - `/overrides` contains the actual code affecting the website.
 - `/SLC - Archive for Live Server` is an archive of the website from Jan 14, 2025. It is used to provide a *somewhat functional* live server for development. Note that the archive cannot record dynamic content, such as our "All Databases" page.
 - `YHS_database_list` .csv & .numbers files are for updating our list of databases
-
 # To Do...
 ## Styling
 - Add ".active" functionality to navbar links https://gemini.google.com/app/f9b762a8883cd5e3
@@ -38,7 +37,6 @@
 - Reference guides for site admins
 	- Note: deleting/replacing an image takes one full day for the site to refresh.
 	- how to update databases
-- eventually update collection links from /collections/aaaa > /reading-lists/aaaa
 - How To: MLA Guide https://docs.google.com/document/d/1PRmpaQG7nBpiSTEPXo8F0NOqKiYwREKl/edit?usp=drive_link&ouid=101727043423308905952&rtpof=true&sd=true
 - Collection: book list for Model UN
 - Collection: Major subject book lists & resource guides
@@ -48,7 +46,6 @@
 		- E-Books
 		- Assignment Showcase
 	- 3D Printer
-	- ~~Study Room w/ Monitor~~
 	- Laptop Loans
 	- Spare Textbooks
 	- Puzzles & Boardgames
@@ -58,6 +55,29 @@
 	- DVD collection
 	- Projector
 	- Whiteboards
+- Improve makerspace guide:
+	- Link to printed models
+		- Thingiverse [Official Remix Flexi Extra Size Cat (Print-in-place)](https://www.thingiverse.com/thing:6911069 "[Official Remix] Flexi Extra Size Cat (Print-in-place)")
+		- Thingiverse [Hypocyloid Engine](https://www.thingiverse.com/thing:6902810 "Hypocyloid Engine")
+		- Thingiverse [Tic-Tac-Toe](https://www.thingiverse.com/thing:6941605)
+		- Printables [Good, Fast Cheap](https://www.printables.com/model/1150768-good-fast-cheap-fidget-toy-pick-two-all-positions)
+		- Printables [PIP Spring](https://www.printables.com/model/559860-spring-button-print-in-place-vertical-print)
+		- Printables [PIP Engine](https://www.printables.com/model/212989-print-in-place-engine-benchmark-the-bengine)
+		- Printables [PIP Dial Indicator](https://www.printables.com/model/212991-print-in-place-dial-indicator-for-easy-bed-levelin)
+		- NIH heart https://3d.nih.gov/entries/3DPX-007207 note: NIH models may need to be cleaned up before printing
+	- Include and Link to Ruben's excellent posters https://www.billieruben.info/post/my-3d-printing-posters-1
+	- Link to advanced modelling tips
+		- https://www.youtube.com/watch?v=8TiFKUlsR_Y
+		- [Print in Place](https://www.youtube.com/watch?v=zEKWZbtndX4)
+	- Eventually add student projects to 3D Printing guide.
+	- Add graphics
+		- Your Maker Coin
+		- Premade Models - Feature representative 1 model from each site
+		- Your Own Project
+			- Program Icons
+			- Cura details
+	- Compare Maker Coin & Own Project steps
+	- [While PLA is foodsafe, dyed filament is not. The pourous result is also fertile ground for bacteria.](https://reprage.com/posts/2012-11-30-is-3d-printed-pla-food-safe/)
 # Design Notes
 - [Our Figma Project](https://www.figma.com/design/sTxIk3kZhqVAVE7eAGqGH3/SLC?node-id=1-9384&t=Tm2fjONQBzFeh19G-0)
 - https://library.rrc.ca/home
