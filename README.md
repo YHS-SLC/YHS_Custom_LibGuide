@@ -1,18 +1,16 @@
 # YHS-LibGuide-Customizations
  This a customization project for York House School's Senior Learning Commons LibGuides 2 website.
 - `/overrides` contains the actual code affecting the website.
-- `/SLC - Archive for Live Server` is an archive of the website from Jan 14, 2025. It is used to provide a *somewhat functional* live server for development. Note that the archive cannot record dynamic content, such as our "All Databases" page.
+- `/SSLCCH Archive` is an archive of the website from Jan 14, 2025. It is used to provide a *somewhat functional* live server for development. Note that the archive cannot record dynamic content, such as our "All Databases" page.
 - `YHS_database_list` .csv & .numbers files are for updating our list of databases
 # To Do...
 ## Styling
-- mimick [school's site](https://www.yorkhouse.ca/)
 - Add ".active" functionality to navbar links https://gemini.google.com/app/f9b762a8883cd5e3
 - News/Forum Posts to feature new library materials & events?
 - Home page - Iconography for common questions
 	- Printing Help
 	- FAQ
 	- Citing
-	- Book a Tutor
 	- Book a Room
 	- Upcoming Events - feature calendar?
 - Style Search Results
@@ -80,7 +78,7 @@
     - [Their Github Project Page](https://github.com/Adam-Shire-WIT/libguides2-customizations?tab=readme-ov-file)
 - LibGuides ABC.xlsx - From Aviva
 - brooklyn public library case study https://medium.com/design-bootcamp/restructuring-the-brooklyn-public-librarys-information-architecture-c9675a313ff1
-- The website depends on several google drive files, as a way to protect PII behind a google login. They are all in [this folder in Kaleb's drive](https://drive.google.com/drive/folders/1udwNokphi7hSrDBAW7WRa8ySkBLZvj1Y)
+- The website depends on several google drive files, as a way to protect PII behind a google login. They are all in [this folder in the SSLC drive](https://drive.google.com/drive/folders/1udwNokphi7hSrDBAW7WRa8ySkBLZvj1Y)
 	- Book Request - Form & Spreadsheet
 	- Book Review - Form & Spreadsheet
 	- Contact Us - Form & Spreadsheet
