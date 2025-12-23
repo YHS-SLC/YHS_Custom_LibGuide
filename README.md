@@ -5,6 +5,7 @@
 - `YHS_database_list` .csv & .numbers files are for updating our list of databases
 # To Do...
 ## Styling
+- mimick [school's site](https://www.yorkhouse.ca/)
 - Add ".active" functionality to navbar links https://gemini.google.com/app/f9b762a8883cd5e3
 - News/Forum Posts to feature new library materials & events?
 - Home page - Iconography for common questions
@@ -28,12 +29,6 @@
 		- Access a science database
 		- Ask a question to library staff
 ## Content
-- add to resources
-	- ILL Request
-	- snopes
-	- internet archive
-	- Standard E-Books (well formatted e-books of open source books, and older books with expired copyright) https://standardebooks.org/ebooks?query=frankenstein&sort=newest&view=grid&per-page=12
-	- World in data https://ourworldindata.org/
 - Reference guides for site admins
 	- Note: deleting/replacing an image takes one full day for the site to refresh.
 	- how to update databases
