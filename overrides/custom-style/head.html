@@ -735,16 +735,17 @@
         }
       }
     }
-
-    & #homepage-resource-hero {
+    & #homepage-resource-hero-cards {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       padding: 32px 0;
-      gap: 8px;
+      gap: 64px;
+      margin: 64px;
 
-
-      & .text-container {
+      & .resource-card {
         display: flex;
+        flex: 1 1 300px;
         max-width: 100%;
         justify-content: space-between;
         color: var(--brand-green);
@@ -754,14 +755,22 @@
         & h3 {
           font-weight: bolder;
           font-size: 64px;
+
+          /* Standardize the wrapping width */
+          max-width: 280px;
+          margin: 0 auto;
+          line-height: 1.1;
         }
 
-        & a {
+        & .resource-card-visual {
+          margin: auto;
+        }
+
+        & .resources-link {
           color: var(--brand-green);
           background-color: var(--brand-yellow);
           width: auto;
           min-height: 48px;
-          display: block;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -776,23 +785,15 @@
           }
         }
       }
-
-      & .visual-container {
-        width: min-content;
-        margin-bottom: -24px;
-
-        & a {
-          color: gainsboro;
-          font-size: 75%;
-          text-align: center;
-          display: block;
-          bottom: 24px;
-          position: relative;
-        }
-      }
     }
-  }
-
+    & .animations-credit {
+        color: gainsboro;
+        font-size: 75%;
+        text-align: center;
+        display: block;
+        bottom: 24px;
+        position: relative;
+    }
   @media (max-width: 556px) {
     #homepage {
       & #homepage-hero .hero-image {
@@ -888,7 +889,7 @@
           & #search-form {
             display: flex;
             padding: 8px 0;
- 
+
             & input {
               border-radius: 6px 0 0 6px;
               border-color: var(--brand-green-faded);
@@ -954,7 +955,7 @@
         background: var(--brand-yellow);
         color: var(--brand-green);
       }
-      
+
       & .s-lg-az-result {
         color: var(--brand-green);
         padding: 8px;
@@ -1004,7 +1005,7 @@
           color: var(--brand-green);
           height: 150px;
           box-shadow: 0px 2px 2px var(--brand-green-faded);
-          
+
           & .s-lg-label-moreinfo {
             display: none;
           }
@@ -1094,7 +1095,7 @@
         }
       }
     }
-    
+
     & #s-lg-tabs-container .nav-tabs,
     & .s-lib-jqtabs .nav-tabs {
       padding: 3px 3px 0px 3px;
@@ -1107,7 +1108,7 @@
         float: none;
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
-        
+
         &.active {
           background: var(--brand-green);
           color: white;
@@ -1136,8 +1137,8 @@
         }
       }
     }
-    & .s-lib-jqtabs .nav-tabs { 
-      height: 48px; 
+    & .s-lib-jqtabs .nav-tabs {
+      height: 48px;
 
     }
     /* Remove tiny box title - Phillip's request */
@@ -1254,7 +1255,7 @@
   }
 </style>
 
-<script> // Add LibGuides Styling, and remove conflicting Bootstrap 5 script on Admin Guide Edit page.
+<script>
   document.addEventListener("DOMContentLoaded", function () {
     var element
     const isAdmin = window.location.pathname.indexOf("admin") != -1
@@ -1268,9 +1269,8 @@
   });
 </script>
 
-<script> // Scrape default guide display, and add them to featured carousel sections.
+<script>
   function appendCards(titleSelector, inputElementSelector, inputPHPSelector, outputElementSelector) {
-    // 1. iterate over default "all guides" list sorted by recency, selecting items starting with "titleSelector" character
     output = $(inputElementSelector)
 
     if (titleSelector != "") {
@@ -1284,19 +1284,16 @@
       return false;
     }
 
-    // 2. Extract links to resource from each item
     var titleList = Array(output.length)
     output.find('a').each(function (i, value) {
       titleList[i] = $(this).text().replace(/(\r\n|\n|\r|^!|^\*)/gm, "").replace(/\s+/g, ' ');
     });
 
-    // 3. Extract php requests from each item.
     var phpList = Array(titleList.length)
     output.find(inputPHPSelector).each(function (i, value) {
       phpList[i] = $(this).attr('data-ajload');
     });
 
-    // 4. Request php "more information" response for each link as html.
     var html = Array(phpList.length);
     var allAJAX = phpList.map((link, index) => {
       return $.ajax({

@@ -29,6 +29,64 @@
             </div>
             <div id="featured-assignments" class="feature-container"></div>
         </div>
+        <div id="homepage-resource-hero-cards">
+            <!-- Card 1: Research Resources -->
+            <div class="resource-card">
+                <h3>Research Resources</h3>
+                <video class="resource-card-visual" width="300" height="300" preload="metadata" style="background: black url('https://cdn-icons-png.flaticon.com/512/10303/10303010.png') 50% 50% / fit no-repeat;" loop="true" muted="muted" playsinline="">
+                    <source src="https://cdn-icons-mp4.flaticon.com/512/10303/10303010.mp4#t=0.0" type="video/mp4">
+                </video>
+                <p>
+                    Dive into our 21 scholarly databases, academic journals, and peer-reviewed articles to support your studies.
+                </p>
+                <a class="resources-link" href="/az.php" target="_blank">
+                    Explore Research
+                </a>
+            </div>
+
+            <!-- Card 2: News Resources -->
+            <div class="resource-card">
+                <h3>News Resources</h3>
+                <video class="resource-card-visual" width="300" height="300" preload="metadata" style="background: black url('https://cdn-icons-png.flaticon.com/512/15747/15747178.png') 50% 50% / fit no-repeat;" loop="true" muted="muted" playsinline="">
+                    <source src="https://cdn-icons-mp4.flaticon.com/512/15747/15747178.mp4#t=0.0" type="video/mp4">
+                </video>
+                <p>
+                    Stay up-to-date with current events through our digital subscriptions to major newspapers and magazines.
+                </p>
+                <a class="resources-link" href="/az.php?s=138901" target="_blank">
+                    Read the News
+                </a>
+            </div>
+
+            <!-- Card 3: Books & eBooks -->
+            <div class="resource-card">
+                <h3>Books &amp; eBooks</h3>
+                <video class="resource-card-visual" width="300" height="300" preload="metadata" style="background: black url('https://cdn-icons-png.flaticon.com/512/15577/15577943.png') 50% 50% / fit no-repeat;" loop="true" muted="muted" playsinline="">
+                    <source src="https://cdn-icons-mp4.flaticon.com/512/15577/15577943.mp4#t=0.0" type="video/mp4">
+                </video>
+                <p>
+                    Unwind with more than 7,000 eBooks, 1,500 audiobooks, and over 9,000 physical books in our collection.
+                </p>
+                <a class="resources-link" href="/resources/catalogue" target="_blank">
+                    Browse Books
+                </a>
+            </div>
+        </div>
+        <a class="animations-credit" href="https://www.flaticon.com/free-animated-icons">Animated icons created by Freepik - Flaticon</a>
+        <script>
+            const cards = document.querySelectorAll('.resource-card');
+            cards.forEach(card => {
+                const visual = card.querySelector('.resource-card-visual');
+                if (visual && visual.tagName.toLowerCase() === 'video') {
+                    card.addEventListener('mouseenter', () => {
+                        visual.play();
+                    });
+                    card.addEventListener('mouseleave', () => {
+                        visual.pause();
+                    });
+                }
+            });
+        </script>
         <div class="feature-section">
             <div class="feature-section-header">
                 <div class="feature-section-label">
@@ -102,43 +160,6 @@
                     // Attach the handler
                     ele.addEventListener('mousedown', mouseDownHandler);
                 }
-            });
-        </script>
-        <div id="homepage-resource-hero">
-            <div class="text-container">
-                <div>
-                    <h3>Learn & Unwind</h3>
-                    <p>
-                        With 21 databases,<br>
-                        more than 7000 eBooks,<br>
-                        almost 1500 audiobooks,<br>
-                        and over 9000 books!
-                    </p>
-                </div>
-                <a href="/az.php" target="_blank">
-                    Explore Our Resources!
-                </a>
-            </div>
-            <div class="visual-container">
-                <video class="resource-hero-visual" width="256" height="256" preload="metadata"
-                    style="background: black  url('https://cdn-icons-png.flaticon.com/512/15577/15577943.png') 50% 50% / fit no-repeat;"
-                    loop="true" muted="muted" playsinline="">
-                    <source src="https://cdn-icons-mp4.flaticon.com/512/15577/15577943.mp4#t=0.1" type="video/mp4">
-                </video>
-                <a class="resource-hero-visual-credit" href="https://www.flaticon.com/free-animated-icons/reading"
-                    title="crediting">Animation by Freepik - Flaticon</a>
-            </div>
-        </div>
-        <script> /* Animate hero visual on hover */
-            const hero = document.getElementById('homepage-resource-hero');
-            var video = hero.getElementsByClassName("resource-hero-visual")[0]
-
-            hero.addEventListener('mouseenter', () => {
-                video.play();
-            });
-
-            hero.addEventListener('mouseleave', () => {
-                video.pause();
             });
         </script>
         {{content_boxes}} <!-- Librarians, Blog List, etc.-->
